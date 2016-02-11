@@ -1,0 +1,32 @@
+<h1 style="margin-bottom: 40px;"><%= @cocktail.name %></h1>
+
+<p class="text-center">
+  <strong>Ingredients: </strong>
+</p>
+<% @doses.each do |dose| %>
+  <p class="text-center">
+    <%= dose.description %>
+    <%= dose.ingredient.name %>
+  </p>
+<% end %>
+</br>
+
+
+<div class="card" style="padding: 50px 0;">
+  <h2>Add ingredient</h2>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <div class="text-center">
+      <div style="display: inline-block;">
+        <p style="font-weight: bold; text-align: left;">Dose</p>
+        <%= f.input :description, label: false, collection: %w(5cl 10cl 20cl 30cl 40cl 50cl), prompt: "Dose" %>
+      </div>
+      <div style="display: inline-block;">
+        <p style="font-weight: bold; text-align: left;">Ingredient</p>
+        <%= f.input :ingredient_id, label: false, collection: @all_ingredients, prompt: "Select an ingredient"  %>
+      </div>
+      <div class="form-actions text-center">
+        <%= f.button :submit, class: "btn btn-primary", value: "Add" %>
+      </div>
+    </div>
+  <% end %>
+</div>

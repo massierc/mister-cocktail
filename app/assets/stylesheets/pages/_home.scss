@@ -2,3 +2,18 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+h1 {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #333333;
+  margin-top: 5%;
+}
+h2 {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+  font-size: 25px;
+  color: #616161;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
