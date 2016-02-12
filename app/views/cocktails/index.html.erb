@@ -1,8 +1,8 @@
 <h1 style="margin-bottom: 40px;">Cocktails</h1>
 <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail do %>
-    <div class="card">
+  <div class="card">
+    <%= link_to cocktail, class: "card-link" do %>
       <%= cocktail.name %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 <% end %>

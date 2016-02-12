@@ -1,8 +1,20 @@
 .card {
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
   background: #F9F9F9;
   width: 60%;
   margin: 10px 20%;
   box-shadow: 1px 1px 2px #CFCFCF;
+  position: relative;
+  font-weight: lighter;
+  font-size: 20px;
+}
+.card-link {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 2;
+  padding-top: 15px;
 }
