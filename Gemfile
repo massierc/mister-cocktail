@@ -54,5 +54,9 @@ gem 'simple_form'
 gem "autoprefixer-rails"
 gem 'better_errors'
 gem 'faker'
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'attachinary'
 
 gem 'rspec-rails', group: [ :test ]
