@@ -5,10 +5,13 @@
 <p class="text-center">
   <strong>Ingredients: </strong>
 </p>
-<% @doses.each do |dose| %>
+<% @cocktail.doses.each do |dose| %>
   <p class="text-center">
     <%= dose.description %>
     <%= dose.ingredient.name %>
+    <%= link_to [@cocktail, dose], :method => 'delete' do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
   </p>
 <% end %>
 </br>
