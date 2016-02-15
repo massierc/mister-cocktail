@@ -1,0 +1,40 @@
+.carrier-wave-field {
+  input {
+  color: #616161;
+  font-size: 16px;
+  padding: 0 0 20px 0;
+  }
+  p {
+    color: #4D4D4D;
+    font-weight: normal;
+  }
+}
+#cocktail_avatar {
+  text-align: center;
+  background: #F9F9F9;
+  width: 155px;
+  height: 155px;
+  margin: 45px auto 30px auto;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px #CFCFCF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    flex-shrink: 0;
+    max-width: 165px;
+    max-height: 165px;
+  }
+}
+#cocktail_header {
+  margin-top: 0;
+}
+#cocktail_add_photo_A {
+  background: none;
+  border: none;
+}
+#cocktail_add_photo_B {
+  color: #C8C8C8;
+  font-size: 30px;
+}

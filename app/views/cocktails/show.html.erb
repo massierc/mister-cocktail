@@ -1,6 +1,20 @@
-<h1 style="margin-bottom: 40px;"><%= @cocktail.name %></h1>
+<div id="cocktail_avatar">
+  <% if @cocktail.photo.file.nil? %>
+    <%= form_for @cocktail do |f| %>
+      <%= f.file_field :photo do %>
+        <i class="fa fa-plus" id="cocktail_add_photo_B"></i>
+      <% end %>
+      <%= f.file_field :photo_cache, type: :hidden %>
+      <%= f.button :submit, id: "cocktail_add_photo_A" do %>
+        <i class="fa fa-plus" id="cocktail_add_photo_B"></i>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= cl_image_tag @cocktail.photo, crop: :fill, style: "align: center;" %>
+  <% end %>
+</div>
 
-<%= cl_image_tag @cocktail.photo, height: 100, width: 150, crop: :fit, style: "align: center;" %>
+<h1 style="margin-bottom: 40px;" id="cocktail_header"><%= @cocktail.name %></h1>
 
 <p class="text-center">
   <strong>Ingredients: </strong>

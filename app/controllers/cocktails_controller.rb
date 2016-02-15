@@ -13,14 +13,20 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new
   end
 
-   def create
-   @cocktail = Cocktail.new(cocktail_params)
-   if @cocktail.save
+  def create
+  @cocktail = Cocktail.new(cocktail_params)
+    if @cocktail.save
      redirect_to cocktail_path(@cocktail)
-   else
+    else
      render :new
-   end
- end
+    end
+  end
+
+  def update
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.update(cocktail_params)
+    redirect_to cocktail_path(@cocktail)
+  end
 
   private
 
